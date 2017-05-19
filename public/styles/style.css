@@ -1,0 +1,111 @@
+@font-face {
+  font-family: daniel;
+  src: url(./fonts/daniel.ttf);
+}
+html, body, #root, #wrapper{
+  height: 100%;
+}
+body{
+  background: #ddd;
+  color: #555;
+  font-family: daniel;
+  font-size: 20px;
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+.grid{
+  display: flex;
+  flex-flow: row wrap;
+}
+.grid > *:first-child{
+  flex: 0 0 90%;
+}
+.grid > *:last-child{
+  flex: 0 0 10%;
+}
+@media(max-width: 600px){
+  .grid > *:first-child{
+    flex: 0 0 85%;
+  }
+  .grid > *:last-child{
+    flex: 0 0 15%;
+  }
+}
+#wrapper{
+  max-width: 500px;
+  margin: 0 auto;
+  background: #fff;
+  width: 100%;
+  overflow: hidden;
+}
+header{
+  text-align: center;
+}
+main{
+
+}
+.form{
+  margin-top: 20px;
+  width: 100%;
+}
+.form input, button{
+  padding: 10px;
+  border: none;
+  font-size: inherit;
+  font-family: inherit;
+}
+.form input:focus, button:focus{
+  outline: none;
+}
+.form input{
+  background: #efefef;
+}
+button{
+  cursor: pointer;
+  background: #f1c40f;
+  color: #fff;
+}
+ul{
+
+}
+li{
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+li .text{
+  transition: all ease-out .5s;
+}
+.text.cancelled{
+  text-decoration: line-through;
+}
+li button{
+  background: transparent;
+  padding: 5px;
+  font-family: inherit;
+}
+.checkbox{
+  width: 20px;
+  height: 20px;
+  position: relative;
+  display: inline-block;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  margin: 0 5px;
+}
+.checkbox input{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  border: none;
+  cursor: pointer;
+}
